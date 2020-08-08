@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5c5061b8c8520f15ab3ca3b642cf6f82",
+    "revision": "150b060704aeaa5b6bf02289d3dc0733",
     "url": "/matsurisu/index.html"
   },
   {
