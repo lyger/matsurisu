@@ -10,4 +10,4 @@ for img_path in Path('.').glob('*.png'):
 	w, h = img.size
 	new_h = int(new_w / w * h)
 	resized = img.resize((new_w, new_h), resample=Image.BICUBIC)
-	resized.save(img_path)
+	resized.save(img_path, optimize=True)
