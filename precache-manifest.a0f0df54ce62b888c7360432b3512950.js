@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "00ffeab0a7f61afca17b8c5138951b40",
+    "revision": "43156ad1adfb0747cb07c7b78445fa5e",
     "url": "/matsurisu/index.html"
   },
   {
-    "revision": "de7c21506541847249d8",
+    "revision": "8a6f9f21ac75801823e0",
     "url": "/matsurisu/static/css/main.9eb80460.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/matsurisu/static/js/2.47342ad9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "de7c21506541847249d8",
-    "url": "/matsurisu/static/js/main.f1b6891f.chunk.js"
+    "revision": "8a6f9f21ac75801823e0",
+    "url": "/matsurisu/static/js/main.8f495c7c.chunk.js"
   },
   {
     "revision": "d0fa08491458ae192edc",
