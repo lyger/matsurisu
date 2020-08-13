@@ -1,68 +1,73 @@
-import React from 'react';
-import Scene from './scene';
-import Parallax from './parallax';
+import React, { useContext, useEffect } from 'react';
+import Container, { ContainerContext } from './container';
+import Intro from './scenes/intro';
+import Various from './scenes/various';
+import Mosaic from './scenes/mosaic';
+import Run, { RunTransition } from './scenes/run';
+import { Milestone3D, MilestoneAtre, MilestoneWatanuki, MilestoneDonuts } from './scenes/milestones';
+import Preloader from './preloader';
+import Bridge from './scenes/bridge';
+
+function PaddedScene({ scene, start, end, padStart, padEnd, ...props }) {
+  padStart = padStart || 400;
+  padEnd = padEnd || 400;
+  const SceneClass = scene;
+  const [{ y }] = useContext(ContainerContext);
+  const show = y < (-start + padStart) && y > (-end - padEnd);
+
+  return (
+    (show)
+    ? <SceneClass start={start} {...props} />
+    : null
+  );
+}
+
+function RelativeScene({ scene, dur, padStart, padEnd, offsetStart, offsetEnd }) {
+  return null;
+}
+
+function RelativeTimeline({ children }) {
+  const dispatch = useContext(ContainerContext)[1];
+
+  let currentTime = 0;
+
+  const timeline = React.Children.map(children, (child, i) => {
+    let { scene, dur, padStart, padEnd, offsetStart, offsetEnd, ...props } = child.props;
+    offsetStart = (offsetStart === undefined) ? 0 : offsetStart;
+    offsetEnd = (offsetEnd === undefined) ? 0 : offsetEnd;
+
+    const start = currentTime + offsetStart;
+    const end = start + dur;
+    currentTime = end + offsetEnd;
+
+    return <PaddedScene key={i} scene={scene} start={start} end={end} padStart={padStart} padEnd={padEnd} {...props} />
+  });
+
+  useEffect(() => dispatch({type: 'SET_MIN_Y', value: -currentTime}), [currentTime, dispatch]);
+
+  return timeline;
+}
 
 function Matsurisu() {
   return (
-    <Scene>
-      <Parallax factor={1.0} position={0}>
-        <p>まつりす</p>
-      </Parallax>
-
-      <Parallax factor={1.5} position={700} offset={-70}>
-        <img alt="matsurisu" src="static/matsurisu_temp.png" />
-      </Parallax>
-      <Parallax factor={1.0} position={700} offset={70}>
-        <p>それは、夏色まつりを愛するもの</p>
-      </Parallax>
-
-      <Parallax factor={0.8} position={1400} offset={-100}>
-        <img alt="matsurisu" src="static/matsurisu_temp.png" />
-      </Parallax>
-      <Parallax factor={1.0} position={1400}>
-        <p>一匹のまつりすなら、</p>
-        <p>配信を見て応援できる</p>
-      </Parallax>
-
-      <Parallax factor={1.1} position={2100} offset={-80}>
-        <img alt="matsurisu" style={{position: 'relative', margin: 0, left: 50}} src="static/matsurisu_temp.png" />
-      </Parallax>
-      <Parallax factor={0.8} position={2100} offset={-80}>
-        <img alt="matsurisu" style={{position: 'relative', margin: 0, left: 200}} src="static/matsurisu_temp.png" />
-      </Parallax>
-      <Parallax factor={1.3} position={2100} offset={-80}>
-        <img alt="matsurisu" style={{position: 'relative', margin: 0, left: 350}} src="static/matsurisu_temp.png" />
-      </Parallax>
-      <Parallax factor={1.0} position={2100} offset={80}>
-        <p>三匹のまつりすなら、</p>
-        <p>バンドを組める</p>
-      </Parallax>
-
-      <Parallax factor={1.1} position={2800} offset={-80}>
-        <img alt="matsurisu" style={{display: 'inline-block', position: 'relative', margin: 0, top: 20, left: 20, transform: 'scale(0.5, 0.5)'}} src="static/matsurisu_temp.png" />
-        <img alt="matsurisu" style={{display: 'inline-block', position: 'relative', margin: 0, top: 40, left: 100, transform: 'scale(0.5, 0.5)'}} src="static/matsurisu_temp.png" />
-        <img alt="matsurisu" style={{display: 'inline-block', position: 'relative', margin: 0, top: 10, left: 30, transform: 'scale(0.5, 0.5)'}} src="static/matsurisu_temp.png" />
-      </Parallax>
-      <Parallax factor={0.8} position={2800} offset={-80}>
-        <img alt="matsurisu" style={{display: 'inline-block', position: 'relative', margin: 0, top: 60, left: 80, transform: 'scale(0.5, 0.5)'}} src="static/matsurisu_temp.png" />
-        <img alt="matsurisu" style={{display: 'inline-block', position: 'relative', margin: 0, top: 30, left: 20, transform: 'scale(0.5, 0.5)'}} src="static/matsurisu_temp.png" />
-        <img alt="matsurisu" style={{display: 'inline-block', position: 'relative', margin: 0, top: 40, left: 60, transform: 'scale(0.5, 0.5)'}} src="static/matsurisu_temp.png" />
-      </Parallax>
-      <Parallax factor={1.3} position={2800} offset={-80}>
-        <img alt="matsurisu" style={{display: 'inline-block', position: 'relative', margin: 0, top: 30, left: 60, transform: 'scale(0.5, 0.5)'}} src="static/matsurisu_temp.png" />
-        <img alt="matsurisu" style={{display: 'inline-block', position: 'relative', margin: 0, top: 10, left: 80, transform: 'scale(0.5, 0.5)'}} src="static/matsurisu_temp.png" />
-        <img alt="matsurisu" style={{display: 'inline-block', position: 'relative', margin: 0, top: 20, left: 40, transform: 'scale(0.5, 0.5)'}} src="static/matsurisu_temp.png" />
-      </Parallax>
-      <Parallax factor={1.0} position={2800} offset={80}>
-        <p>どんどん多くなる</p>
-      </Parallax>
-      
-      <Parallax factor={1.0} position={3500} offset={80}>
-        <p>めっちゃ多くなって</p>
-        <p>ズームアウトして</p>
-        <p>最終的にモザイクになる</p>
-      </Parallax>
-    </Scene>
+    <Container>
+      <Preloader/>
+      <RelativeTimeline>
+        <RelativeScene scene={Intro} dur={1600} />
+        <RelativeScene scene={Various} dur={4000} padStart={800} />
+        <RelativeScene scene={Run} dur={3600} offsetStart={200} offsetEnd={-600} />
+        <RelativeScene scene={Milestone3D} dur={1800} padStart={1200} />
+        <RelativeScene scene={RunTransition} dur={1500} padStart={800} offsetStart={-600} offsetEnd={-400} />
+        <RelativeScene scene={MilestoneAtre} dur={1800} padStart={1200} />
+        <RelativeScene scene={RunTransition} dur={1500} padStart={800} offsetStart={-600} offsetEnd={-400} />
+        <RelativeScene scene={MilestoneWatanuki} dur={1800} padStart={1200} />
+        <RelativeScene scene={RunTransition} dur={1500} padStart={800} offsetStart={-600} offsetEnd={-400} />
+        <RelativeScene scene={MilestoneDonuts} dur={1800} padStart={1200} />
+        <RelativeScene scene={RunTransition} dur={1500} padStart={800} offsetStart={-600} offsetEnd={-400} />
+        <RelativeScene scene={Bridge} dur={3500} />
+        <RelativeScene scene={Mosaic} dur={3500} effectDur={3000} fadeStart={1500} fadeDur={700} />
+      </RelativeTimeline>
+    </Container>
   ); 
 }
 
