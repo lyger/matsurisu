@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/matsurisu/static/css/main.394707ef.chunk.css",
-    "main.js": "/matsurisu/static/js/main.53e68b95.chunk.js",
-    "main.js.map": "/matsurisu/static/js/main.53e68b95.chunk.js.map",
+    "main.js": "/matsurisu/static/js/main.492af759.chunk.js",
+    "main.js.map": "/matsurisu/static/js/main.492af759.chunk.js.map",
     "runtime-main.js": "/matsurisu/static/js/runtime-main.d0a72bda.js",
     "runtime-main.js.map": "/matsurisu/static/js/runtime-main.d0a72bda.js.map",
     "static/js/2.47342ad9.chunk.js": "/matsurisu/static/js/2.47342ad9.chunk.js",
     "static/js/2.47342ad9.chunk.js.map": "/matsurisu/static/js/2.47342ad9.chunk.js.map",
     "index.html": "/matsurisu/index.html",
-    "precache-manifest.ccc081fc21680b73393692071045e0e7.js": "/matsurisu/precache-manifest.ccc081fc21680b73393692071045e0e7.js",
+    "precache-manifest.db24529304cacb91238a20c704f37e8e.js": "/matsurisu/precache-manifest.db24529304cacb91238a20c704f37e8e.js",
     "service-worker.js": "/matsurisu/service-worker.js",
     "static/css/main.394707ef.chunk.css.map": "/matsurisu/static/css/main.394707ef.chunk.css.map",
     "static/js/2.47342ad9.chunk.js.LICENSE.txt": "/matsurisu/static/js/2.47342ad9.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.d0a72bda.js",
     "static/js/2.47342ad9.chunk.js",
     "static/css/main.394707ef.chunk.css",
-    "static/js/main.53e68b95.chunk.js"
+    "static/js/main.492af759.chunk.js"
   ]
 }
