@@ -101,7 +101,7 @@ div {
 
 .play-prompt {
   position: absolute;
-  z-index: 999;
+  z-index: 1001;
   left: 3em;
   top: 2em;
   color: inherit;
@@ -173,4 +173,25 @@ img.mosaic {
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
   z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  left: 50%;
+  bottom: 1em;
+  transform: translate(-50%, 0);
+  z-index: 1001;
+  white-space: nowrap;
+  font-size: 0.75em;
+  opacity: 1;
+  transition: 0.25s;
+}
+
+.footer.hidden {
+  z-index: 0;
+  opacity: 0;
+}
+
+.footer a {
+  color: inherit;
 }

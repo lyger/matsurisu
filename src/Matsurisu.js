@@ -64,8 +64,8 @@ function Matsurisu() {
         <RelativeScene scene={RunTransition} dur={1500} padStart={800} offsetStart={-600} offsetEnd={-400} />
         <RelativeScene scene={MilestoneDonuts} dur={1800} padStart={1200} />
         <RelativeScene scene={RunTransition} dur={1500} padStart={800} offsetStart={-600} offsetEnd={-400} />
-        <RelativeScene scene={Bridge} dur={3500} />
-        <RelativeScene scene={Mosaic} dur={3500} effectDur={3000} fadeStart={1500} fadeDur={700} />
+        <RelativeScene scene={Bridge} dur={6000} offsetEnd={-600} />
+        <RelativeScene scene={Mosaic} dur={3500} effectDur={3000} fadeStart={1500} fadeDur={500} />
       </RelativeTimeline>
     </Container>
   ); 

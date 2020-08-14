@@ -54,7 +54,7 @@ export function MilestoneAtre({ start }) {
         <TimeSprite name="merch" width={200} x={300} />
       </Parallax>
       <Fade start={start + 300} end={start + 800} offset={160}>
-        <p className="title">180,000人が集まったとき、館内放送ができた</p>
+        <p className="title">180,000人が集まったとき、アトレでコラボをした</p>
       </Fade>
     </>
   );
@@ -91,8 +91,9 @@ export function MilestoneDonuts({ start }) {
         <TimeSprite name="donutsA" width={200} x={60} />
         <TimeSprite name="donutsB" width={200} stagger={1} x={90} />
       </Parallax>
-      <Fade start={start + 300} end={start + 800} offset={150}>
-        <p className="title">440,000人が集まったとき、ドーナツとコラボできた</p>
+      <Fade start={start + 300} end={start + 800} offset={175}>
+        <p className="title">440,000人が集まったとき</p>
+        <p className="title">念願のドーナツコラボができた</p>
       </Fade>
     </>
   );

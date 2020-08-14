@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useLayoutEffect, createContext, useReducer, useCallback } from 'react';
 import Scroller from './scroller';
+import { HelmetProvider } from 'react-helmet-async';
 
 const FPS = 10;
 
@@ -52,10 +53,12 @@ export default function Container({ children }) {
   return (
     <AnimationContext.Provider value={frame}>
       <ContainerContext.Provider value={[dims, dispatch]}>
-        <Scroller y={dims.y} minY={dims.minY} setY={(y) => dispatch({type: 'SET_Y', value: y})} />
-        <div className="main" ref={ref}>
-          {children}
-        </div>
+        <HelmetProvider>
+          <Scroller y={dims.y} minY={dims.minY} setY={(y) => dispatch({type: 'SET_Y', value: y})} />
+          <div className="main" ref={ref}>
+            {children}
+          </div>
+        </HelmetProvider>
       </ContainerContext.Provider>
     </AnimationContext.Provider>
   );

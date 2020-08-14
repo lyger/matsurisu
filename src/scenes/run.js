@@ -23,7 +23,7 @@ function Herd({ num, seed, scatterX, scatterY, onLoad }) {
       const newRisu = {
         x: randRange(rng, 0, scatterX),
         y: randRange(rng, -scatterY / 2, scatterY / 2) + scatterY * rows,
-        tint: [randRange(rng, 0.75, 1.25), randRange(rng, -15, 15)],
+        variant: Math.floor(rng() * 5),
         stagger: (rng() > 0.5) ? 1 : 0,
       };
       if (cumX + RISUWIDTH + newRisu.x > width) {
@@ -39,7 +39,7 @@ function Herd({ num, seed, scatterX, scatterY, onLoad }) {
   return data.map((risu, i) => {
     const key = `${seed}${i}`;
     return (
-      <PosSprite key={key} name="run" width={RISUWIDTH} stagger={risu.stagger} x={risu.x} y={risu.y} tint={risu.tint} onLoad={onLoad} />
+      <PosSprite key={key} name={`run${risu.variant}_`} width={RISUWIDTH} stagger={risu.stagger} x={risu.x} y={risu.y} onLoad={onLoad} />
     );
   });
 }
@@ -54,10 +54,10 @@ export function RunTransition({ start }) {
         <Herd num={6} seed={"scenes"} scatterX={70} scatterY={250} />
       </Parallax>
       <Parallax factor={1.1} position={start} stay={0} offset={600}>
-        <Herd num={10} seed={"currently"} scatterX={70} scatterY={250} />
+        <Herd num={10} seed={"currently..."} scatterX={70} scatterY={250} />
       </Parallax>
       <Parallax factor={1.2} position={start} stay={0} offset={900}>
-        <Herd num={9} seed={"wait"} scatterX={70} scatterY={250} />
+        <Herd num={9} seed={"please hold"} scatterX={70} scatterY={250} />
       </Parallax>
     </>
   );

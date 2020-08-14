@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 const IMG_ASSETS = [
   '/matsurisu/static/img/classroom.png',
@@ -43,8 +43,16 @@ const IMG_ASSETS = [
   '/matsurisu/static/img/sprite/pixel6_2.png',
   '/matsurisu/static/img/sprite/pixel7_1.png',
   '/matsurisu/static/img/sprite/pixel7_2.png',
-  '/matsurisu/static/img/sprite/run1.png',
-  '/matsurisu/static/img/sprite/run2.png',
+  '/matsurisu/static/img/sprite/run0_1.png',
+  '/matsurisu/static/img/sprite/run0_2.png',
+  '/matsurisu/static/img/sprite/run1_1.png',
+  '/matsurisu/static/img/sprite/run1_2.png',
+  '/matsurisu/static/img/sprite/run2_1.png',
+  '/matsurisu/static/img/sprite/run2_2.png',
+  '/matsurisu/static/img/sprite/run3_1.png',
+  '/matsurisu/static/img/sprite/run3_2.png',
+  '/matsurisu/static/img/sprite/run4_1.png',
+  '/matsurisu/static/img/sprite/run4_2.png',
   '/matsurisu/static/img/sprite/sglow1.png',
   '/matsurisu/static/img/sprite/sglow2.png',
   '/matsurisu/static/img/sprite/speaker1.png',
@@ -61,10 +69,8 @@ const IMG_ASSETS = [
 
 export default function Preloader() {
   return (
-    <HelmetProvider>
-      <Helmet>
-        {IMG_ASSETS.map((asset) => <link key={asset} rel="preload" href={asset} as="image" />)}
-      </Helmet>
-    </HelmetProvider>
+    <Helmet>
+      {IMG_ASSETS.map((asset) => <link key={asset} rel="preload" href={asset} as="image" />)}
+    </Helmet>
   );
 }

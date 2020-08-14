@@ -1,8 +1,7 @@
-import React, { useRef, useContext } from 'react';
+import React, { useContext } from 'react';
 import { ContainerContext } from './container';
 
 export default function Parallax({ position, offset, stay, factor, children }) {
-  const ref = useRef(null);
   const [containerDims] = useContext(ContainerContext);
 
   position = position || 0;
