@@ -1,9 +1,9 @@
 {
-  "short_name": "Matsurisu",
-  "name": "500,000 Matsurisu",
+  "short_name": "まつりす",
+  "name": "500,000人のまつりす",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "favicon.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }
