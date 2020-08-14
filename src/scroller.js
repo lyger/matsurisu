@@ -71,15 +71,15 @@ export default function Scroller({ y, minY, setY }) {
         onPointerDown={(scrollState === FINISHED) ? resetY : startAutoplay}
         disabled={(scrollState === AUTO)}
       >
-        {(scrollState === FINISHED) ? '最初から' : '自動再生'}
+        {(scrollState === FINISHED) ? 'Replay' : 'Autoplay'}
       </button>
-      <div className={`scroll-prompt${(scrollState === INITIAL) ? '' : ' hidden'}`}>スクロール</div>
+      <div className={`scroll-prompt${(scrollState === INITIAL) ? '' : ' hidden'}`}>Scroll</div>
       <div className={`footer${(scrollState === FINISHED) ? '' : ' hidden'}`}>
         {/* eslint-disable-next-line */}
-        イラスト：<a href={(scrollState === FINISHED) ? 'https://twitter.com/tera753' : null} target="_blank" rel="noopener noreferrer">Tera-tama</a>
+        Art:&nbsp;<a href={(scrollState === FINISHED) ? 'https://twitter.com/tera753' : null} target="_blank" rel="noopener noreferrer">Tera-tama</a>
         &nbsp;|&nbsp;
         {/* eslint-disable-next-line */}
-        プログラミング：<a href={(scrollState === FINISHED) ? 'https://twitter.com/lyger_0' : null} target="_blank" rel="noopener noreferrer">lyger</a>
+        Code:&nbsp;<a href={(scrollState === FINISHED) ? 'https://twitter.com/lyger_0' : null} target="_blank" rel="noopener noreferrer">lyger</a>
       </div>
     </div>
   );

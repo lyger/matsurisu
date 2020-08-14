@@ -57,24 +57,24 @@ export default function Bridge({ start }) {
       </Parallax>
 
       <Fade start={start} end={start + 400} offset={0}>
-        <p className="title">まつりちゃんの頑張りに惹かれて</p>
-        <p className="title">たくさんのまつりすが集まってきた</p>
+        <p className="title">So many Matsurisu have flocked to her,</p>
+        <p className="title">captivated by all her hard work</p>
       </Fade>
       <Fade start={start + 1000} end={start + 1400} offset={0}>
-        <p className="title">まつりちゃんの頑張りが報われるように</p>
-        <p className="title">たくさんのまつりすが応援してきた</p>
+        <p className="title">So many Matsurisu have cheered her on,</p>
+        <p className="title">hoping to reward her efforts</p>
       </Fade>
       <Fade start={start + 2000} end={start + 2400} offset={0}>
-        <p className="title">まつりちゃんのやりたいことが叶うように</p>
+        <p className="title">Hoping she can do what she wants to do</p>
       </Fade>
       <Fade start={start + 3000} end={start + 3400} offset={0}>
-        <p className="title">まつりちゃんの夢が叶うように</p>
+        <p className="title">Hoping her dreams will come true</p>
       </Fade>
       <Fade start={start + 4000} end={start + 4400} offset={0}>
-        <p className="title">一人一人のちからは小さいけれど</p>
+        <p className="title">Alone, we may not be able to do much</p>
       </Fade>
       <Fade start={start + 5000} end={start + 5400} offset={0}>
-        <p className="title">500,000人も集まればきっと…</p>
+        <p className="title">But with 500,000 together...</p>
       </Fade>
     </>
   );

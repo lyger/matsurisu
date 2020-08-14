@@ -10,14 +10,14 @@ export default function Intro({ start }) {
         <TimeSprite name="sit" width={200} center />
       </Parallax>
       <Fade start={start} end={start} offset={50}>
-        <p className="title">まつりす</p>
+        <p className="title">Matsurisu</p>
       </Fade>
 
       <Parallax factor={1.0} position={start + 800} offset={-50}>
         <TimeSprite name="cheer" width={200} center />
       </Parallax>
       <Fade start={start + 800} end={start + 1100} offset={50}>
-        <p className="title">それは、夏色まつりを愛するもの</p>
+        <p className="title">Such is the name for those who love Natsuiro Matsuri</p>
       </Fade>
     </>
   );

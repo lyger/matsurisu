@@ -10,8 +10,8 @@ html, body {
 
 body {
   margin: 0;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-size: 24px;
+  font-family: 'Caveat Brush', cursive;
+  font-size: 32px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -22,26 +22,26 @@ div {
 
 .title {
   text-align: center;
-  line-height: 1em;
+  line-height: 0.5em;
 }
 
 .title-left {
   text-align: left;
   margin-left: 2em;
-  line-height: 1em;
+  line-height: 0.5em;
 }
 
 .title-right {
   text-align: right;
   margin-right: 2em;
-  line-height: 1em;
+  line-height: 0.5em;
 }
 
 .title-congrats {
   text-align: center;
   text-shadow: 0px 1px 10px black;
   font-size: 2em;
-  line-height: 2em;
+  line-height: 0.5em;
 }
 
 .main {

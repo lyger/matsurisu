@@ -17,7 +17,7 @@ export function PosSprite({ name, x, y, stagger, width, tint, onLoad }) {
       frameDur={50}
       stagger={stagger}
       onLoad={onLoad}
-      srcs={[`/matsurisu/static/img/sprite/${name}1.png`, `/matsurisu/static/img/sprite/${name}2.png`]}
+      srcs={[`/matsurisu_en/static/img/sprite/${name}1.png`, `/matsurisu_en/static/img/sprite/${name}2.png`]}
     />
   );
 }
@@ -44,7 +44,7 @@ export function TimeSprite({ name, x, y, center, stagger, width, tint, onLoad })
       frameDur={5}
       stagger={stagger}
       onLoad={onLoad}
-      srcs={[`/matsurisu/static/img/sprite/${name}1.png`, `/matsurisu/static/img/sprite/${name}2.png`]}
+      srcs={[`/matsurisu_en/static/img/sprite/${name}1.png`, `/matsurisu_en/static/img/sprite/${name}2.png`]}
     />
   );
 }

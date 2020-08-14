@@ -67,7 +67,7 @@ export default function Run({ start }) {
   return (
     <>
       <Fade start={start} end={start + 300}>
-        <p className="title">そしてそのまつりす達が</p>
+        <p className="title">And those Matsurisu</p>
       </Fade>
       <Parallax factor={1.1} position={start + 400} stay={0} offset={-100}>
         <Herd num={2} seed={"natsuiro"} scatterX={70} scatterY={400} />
@@ -77,7 +77,7 @@ export default function Run({ start }) {
       </Parallax>
 
       <Fade start={start + 800} end={start + 1100}>
-        <p className="title">どんどん</p>
+        <p className="title">keep growing</p>
       </Fade>
       <Parallax factor={1.2} position={start + 1200} stay={0} offset={-200}>
         <Herd num={3} seed={"we"} scatterX={70} scatterY={200} />
@@ -90,7 +90,7 @@ export default function Run({ start }) {
       </Parallax>
 
       <Fade start={start + 1600} end={start + 1900}>
-        <p className="title">増えていく</p>
+        <p className="title">in number</p>
       </Fade>
       <Parallax factor={0.9} position={start + 2200} stay={0} offset={-200}>
         <Herd num={7} seed={"congratulations"} scatterX={70} scatterY={250} />

@@ -34,17 +34,18 @@ export default function Mosaic({ start, effectDur, fadeStart, fadeDur}) {
       <PixelZoom initialZoom={100} zoomStart={start} zoomEnd={start + fadeStart + fadeDur} zoomDur={effectDur} totalHeight={800} />
       <ImageZoom initialZoom={100} zoomStart={start} zoomDur={effectDur} fadeStart={start + fadeStart} fadeDur={fadeDur} totalHeight={800} />
       <Fade start={start + effectDur + 300} end={start + effectDur + 1300} layer={200}>
-        <img alt="love" src="/matsurisu/static/img/mosaic.png" />
+        <img alt="love" src="/matsurisu_en/static/img/mosaic.png" />
       </Fade>
       <Fade start={start + 300} end={start + effectDur * 0.8} fadeOutDur={effectDur * 0.2} layer={500} offset={320}>
         <p className="title-congrats">
           <CountUp start={start - 300} dur={effectDur + 300} startNum={0} endNum={500000} accel={5} />
         </p>
       </Fade>
-      <Fade start={start + effectDur + 300} end={start + effectDur + 1300} layer={500} offset={320}>
-        <p className="title-congrats">500,000人おめでとう！</p>
+      <Fade start={start + effectDur + 300} end={start + effectDur + 1300} layer={500} offset={300}>
+        <p className="title-congrats">Congratulations on</p>
+        <p className="title-congrats">500,000 subscribers!</p>
       </Fade>
-      <TitleChange start={start + effectDur}>500,000人のまつりす</TitleChange>
+      <TitleChange start={start + effectDur}>500,000 Matsurisu</TitleChange>
     </>
   );
 }

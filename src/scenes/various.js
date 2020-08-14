@@ -10,28 +10,28 @@ export default function Various({ start }) {
         <TimeSprite name="wave" width={180} center />
       </Parallax>
       <Fade start={start} end={start + 300} offset={50}>
-        <p className="title">いろんなまつりすがいる</p>
+        <p className="title">There are all sorts of Matsurisu</p>
       </Fade>
 
       <Parallax factor={1.5} position={start + 800} offset={0}>
         <TimeSprite name="art" width={200} x={50} />
       </Parallax>
       <Parallax factor={1.0} position={start + 800} offset={0}>
-        <p className="title-right">絵が描けるまつりす</p>
+        <p className="title-right">Some Matsurisu draw</p>
       </Parallax>
 
       <Parallax factor={1.5} position={start + 1600} offset={0}>
         <TimeSprite name="music" width={200} x={400} />
       </Parallax>
       <Parallax factor={1.0} position={start + 1600} offset={0}>
-        <p className="title-left">音楽ができるまつりす</p>
+        <p className="title-left">Some Matsurisu make music</p>
       </Parallax>
 
       <Parallax factor={1.5} position={start + 2400} offset={-50}>
         <TimeSprite name="pc" width={200} center />
       </Parallax>
       <Parallax factor={1.0} position={start + 2400} offset={50}>
-        <p className="title">いつも見守ってるまつりす</p>
+        <p className="title">Some Matsurisu watch and cheer along</p>
       </Parallax>
 
       <Parallax factor={1.5} position={start + 3200} offset={-45}>
@@ -53,8 +53,8 @@ export default function Various({ start }) {
         <TimeSprite name="pc" width={100} x={310} />
       </Parallax>
       <Fade start={start + 3200} end={start + 3500} offset={60}>
-        <p className="title">出来ることは違うけれど</p>
-        <p className="title">愛する気持ちは皆同じ</p>
+        <p className="title">While we may have different abilities,</p>
+        <p className="title">our love for our idol is the same</p>
       </Fade>
     </>
   );

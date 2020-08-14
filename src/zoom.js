@@ -54,7 +54,7 @@ export function ImageZoom({ zoomStart, zoomDur, fadeStart, fadeDur, initialZoom,
         className="mosaic"
         alt="matsuri"
         style={{width: zoom * width, height: zoom * totalHeight}}
-        src="/matsurisu/static/img/mosaic_monochrome.gif"
+        src="/matsurisu_en/static/img/mosaic_monochrome.gif"
       />
     </div>
   );
